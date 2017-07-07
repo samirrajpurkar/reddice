@@ -1,7 +1,10 @@
 import React from 'react';
 
-export default () => {
-  return (
-    <h1>Hello from App javascript</h1>
-  )
+
+class App extends React.Component {
+  render() {
+    return (<h1>Finally Hot Reloading!!!</h1>);
+  }
 }
+
+export default App;
