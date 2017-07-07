@@ -14,11 +14,11 @@ export default {
   plugins: [
           new webpack.HotModuleReplacementPlugin()
       ],
-  module: {
-    loaders: [
-      {test: /\.js?$/, exclude: /(node_modules)/,loader: 'react-hot-loader'},
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
-    ]
-  }
+      module: {
+            loaders: [{
+                test: /\.js$/,
+                loaders: ['react-hot-loader/webpack', 'babel'],
+                include: path.join(__dirname, 'src')
+            }]
+        }
 }
